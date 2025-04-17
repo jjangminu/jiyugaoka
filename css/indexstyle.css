@@ -1831,6 +1831,9 @@ body {
     font-size: 15px;
   }
   /*con01 image*/
+  .con01 .img_wrap {
+    width: 60%;
+  }
   .con01 ul {
     display: flex;
     gap: 1rem;

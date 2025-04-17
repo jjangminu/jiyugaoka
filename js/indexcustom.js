@@ -95,6 +95,16 @@ $(function () {
     }, delay);
   });
 
+  //top_button
+  $(window).on("scroll", function () {
+    scr = $(this).scrollTop();
+    if (scr >= 50) {
+      $(".fix_but").css({ opacity: "1" });
+    } else {
+      $(".fix_but").css({ opacity: "0" });
+    }
+  });
+
   //visual
   visual_mov();
   function visual_mov() {
