@@ -21,6 +21,25 @@ body {
   word-break: keep-all;
 }
 
+.fix_but {
+  border: 1px solid gray;
+  background-color: white;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: gray;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+
 /*mobile*/
 @media (max-width: 600px) {
   /*header*/
