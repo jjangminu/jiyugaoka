@@ -85,33 +85,6 @@ $(function () {
       }
     })
     .resize();
-
-  $(window)
-    .resize(function () {
-      if (window.innerWidth > 600) {
-        $(".con01 li").on("mouseenter", function () {
-          $(".con01 li img").addClass("mov");
-          $(this).children("img").addClass("mov");
-        });
-      } else {
-        //con01 mobile_button
-        $(".con01 .mo_but .right").on("click", function () {
-          $(this).css({ opacity: "0" });
-          $(this).siblings(".left").css({ opacity: "1" });
-          $(".con01 .image").css({ "margin-left": "-100%" });
-          $(".con01 .image li img").removeClass("mov");
-          $(".con01 .image li:last-child img").addClass("mov");
-        });
-        $(".con01 .mo_but .left").on("click", function () {
-          $(this).css({ opacity: "0" });
-          $(this).siblings(".right").css({ opacity: "1" });
-          $(".con01 .image").css({ "margin-left": "0px" });
-          $(".con01 .image li img").removeClass("mov");
-          $(".con01 .image li:first-child img").addClass("mov");
-        });
-      }
-    })
-    .resize();
   /* 사이즈에 맞춰 reset */
   var delay = 100;
   var timer = null;
@@ -136,6 +109,22 @@ $(function () {
   });
   $(".navy_but a").on("mouseleave", function () {
     $(".navy_but .bg").removeClass("mov");
+  });
+
+  //con01 mobile_button
+  $(".con01 .mo_but .right").on("click", function () {
+    $(this).css({ opacity: "0" });
+    $(this).siblings(".left").css({ opacity: "1" });
+    $(".con01 .image").css({ "margin-left": "-100%" });
+    $(".con01 .image li img").removeClass("mov");
+    $(".con01 .image li:last-child img").addClass("mov");
+  });
+  $(".con01 .mo_but .left").on("click", function () {
+    $(this).css({ opacity: "0" });
+    $(this).siblings(".right").css({ opacity: "1" });
+    $(".con01 .image").css({ "margin-left": "0px" });
+    $(".con01 .image li img").removeClass("mov");
+    $(".con01 .image li:first-child img").addClass("mov");
   });
 
   //con02 drag
